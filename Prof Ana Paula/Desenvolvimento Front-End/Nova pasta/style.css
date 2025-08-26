@@ -1,0 +1,10 @@
+.fundo{
+    background-color: rgb(60, 127, 182);
+    height: 200px;
+}
+
+.coluna{
+    background-color: blue;
+    border: 1px solid black;
+    height: 100px;
+}

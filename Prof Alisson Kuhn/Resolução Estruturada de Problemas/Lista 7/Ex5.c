@@ -5,6 +5,14 @@
 //	do quadrado/retângulo por parâmetro 
 //	calcule e retorne também por parâmetro a área (Area).
 
-void calc_area(){
+void calc_area(float larg, float comp, float *area){
+	*area = larg * comp;
 	
+	
+}
+
+void main(){
+	float larg, comp, area;
+	calc_area(larg, comp, &area);
+	printf("%d")
 }
