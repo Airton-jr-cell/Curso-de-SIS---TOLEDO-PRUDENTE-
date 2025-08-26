@@ -6,15 +6,20 @@
 
 void calc_idade(int DataNascimento, int AnoAtual, int *idade){
 	
-	*idade = DataNascimento - AnoAtual;
+	*idade = AnoAtual - DataNascimento;
 }
 	
 
 void main(){
 	int DataNascimento, AnoAtual, idade;
-	calc_idade(Dn,At);
+	
 	printf("Digite o ano atual: ");
-		scanf("%d", &At);
+		scanf("%d", &AnoAtual);
+		
 	printf("Digite o ano do seu nascimento: ");
-		scanf("%d", &Dn);
+		scanf("%d", &DataNascimento);
+		
+	calc_idade(DataNascimento,AnoAtual,&idade);
+	
+	printf("Idade: %d", idade);
 }
