@@ -8,3 +8,7 @@
     border: 1px solid black;
     height: max-content;
 }
+
+*{
+    padding: 10px;
+}
