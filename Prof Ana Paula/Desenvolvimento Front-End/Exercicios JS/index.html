@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Exercícios JS</h1>
+
+        <!-- Ex1-->
+        <div class="mb-4">
+            <h3>1. Verificar se o número é par ou ímpar</h3>
+            <input type="number" id="numero" class="form-control mb-2" placeholder="Digite um número">
+            <button class="btn btn-primary" onclick="verificarParOuImpar()">Verificar</button>
+            <p id="resultadoParOuImpar" class="mt-2"></p>
+        </div>
+
+        <!-- Ex2-->
+        <div class="mb-4">
+            <h3>2. Concatenar dois textos</h3>
+            <input type="text" id="texto1" class="form-control mb-2" placeholder="Digite o primeiro texto">
+            <input type="text" id="texto2" class="form-control mb-2" placeholder="Digite o segundo texto">
+            <button class="btn btn-primary" onclick="concatenarTextos()">Concatenar</button>
+            <p id="resultadoConcatenacao" class="mt-2"></p>
+        </div>
+
+        <!-- Ex3-->
+        <div class="mb-4">
+            <h3>3. Dobro de um número</h3>
+            <input type="number" id="numeroDobro" class="form-control mb-2" placeholder="Digite um número">
+            <button class="btn btn-primary" onclick="calcularDobro()">Calcular Dobro</button>
+            <p id="resultadoDobro" class="mt-2"></p>
+        </div>
+
+        <!-- Ex4 -->
+        <div class="mb-4">
+            <h3>4. Área de um quadrado</h3>
+            <input type="number" id="ladoQuadrado" class="form-control mb-2" placeholder="Digite o lado do quadrado">
+            <button class="btn btn-primary" onclick="calcularArea()">Calcular Área</button>
+            <p id="resultadoArea" class="mt-2"></p>
+        </div>
+
+        <!-- Ex5 -->
+        <div class="mb-4">
+            <h3>5. IMC (Índice de Massa Corporal)</h3>
+            <input type="number" id="peso" class="form-control mb-2" placeholder="Digite seu peso (kg)">
+            <input type="number" id="altura" class="form-control mb-2" placeholder="Digite sua altura (m)">
+            <button class="btn btn-primary" onclick="calcularIMC()">Calcular IMC</button>
+            <p id="resultadoIMC" class="mt-2"></p>
+        </div>
+    </div>
+
+    <script>
+        function verificarParOuImpar() {
+            const numero = parseInt(document.getElementById('numero').value);
+            const resultado = numero % 2 === 0 ? 'Par' : 'Ímpar';
+            alert("O número é " + resultado);
+        }
+
+        function concatenarTextos() {
+            var texto1 = document.getElementById("texto1").value;
+            var texto2 = document.getElementById("texto2").value;
+            alert("Resultado: " + texto1 + texto2);
+        }
+
+        function calcularDobro() {
+            var numero = document.getElementById("numeroDobro").value;
+            var dobro = numero * 2;
+            alert("O dobro é " + dobro);
+        }
+
+        function calcularArea() {
+            var lado = document.getElementById("ladoQuadrado").value;
+            var area = lado * lado;
+            alert("A área do quadrado é " + area);
+        }
+
+        function calcularIMC() {
+            var peso = document.getElementById("peso").value;
+            var altura = document.getElementById("altura").value;
+            var imc = peso / (altura * altura);
+            imc = imc.toFixed(2);
+            var classificacao = "";
+
+            if (imc < 18.5) {
+                classificacao = "Abaixo do peso";
+            } else if (imc < 24.9) {
+                classificacao = "Peso normal";
+            } else if (imc < 29.9) {
+                classificacao = "Sobrepeso";
+            } else {
+                classificacao = "Obesidade";
+            }
+
+            alert("Seu IMC é " + imc + " (" + classificacao + ")");
+        }
+        
+    </script>
+</body>
+</html>
