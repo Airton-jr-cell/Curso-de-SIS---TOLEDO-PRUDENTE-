@@ -24,5 +24,15 @@ botao.addEventListener('click', ()=>{
     });
 
 
+  // botao btn classe1
+  const btnclasse1 = document.getElementById("btnclasse1");
+  const btnclasse2 = document.getElementById("btnclasse2");
+  
+  btnclasse1.addEventListener('click', ()=>{
+    document.getElementById("divtexto").classList.add("classe1");
+
+  });
+
+
 
 
