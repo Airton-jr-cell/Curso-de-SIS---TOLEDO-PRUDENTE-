@@ -31,6 +31,15 @@ botao.addEventListener('click', ()=>{
   btnclasse1.addEventListener('click', ()=>{
     document.getElementById("divtexto").classList.add("classe1");
 
+
+    
+  });
+
+    btnclasse2.addEventListener('click', ()=>{
+    document.getElementById("divtexto").classList.add("classe2");
+
+
+    
   });
 
 
