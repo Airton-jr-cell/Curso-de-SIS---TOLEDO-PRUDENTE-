@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <!--Desenvolva um formulário contendo um mini cadastro. 
+    Este formulário deverá possuir um campo text para o nome, 
+    outro para Password para a senha, e um botão do tipo button. 
+    Quando este botão for cliclado deverá ser validado se os campos foram preenchidos, 
+    sendo exibida uma mensagem ao usuário caso estejam em branco.-->
+</head>
+<body>
+    <form>
+        <h1>Cadastro</h1>
+        <label>Digite seu nome:</label>
+        <input type="text" id="nome">
+            <p id="nome_invalido" style="color: red;"></p>
+            <p id="nome_valido" style="color: green;"></p>
+        <label>Digite sua senha:</label>
+        <input type="password" id="senha">
+            <p id="senha_invalido" style="color: red"></p>
+            <p id="senha_valido" style="color: green;"></p>
+        <button onclick="validar()" type="button">enviar</button>
+            
+    </form>
+</body>
+</html>
