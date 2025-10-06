@@ -6,3 +6,7 @@
 //por parâmetro, e retorna, também por parâmetro, dois vetores A e B. 
 //O vetor A deve conter os elementos pares de X e o vetor B, os elementos ímpares. 
 //// mostrar os pares e os impares.
+
+
+
+
